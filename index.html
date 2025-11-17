@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JCV Section-wise Quiz</title>
+<link rel="stylesheet" href="styles.css">
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+  options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']}
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+
+<h1 class="title">JCV Quiz Hub</h1>
+
+<!-- Quiz list -->
+<div id="quiz-list" class="quiz-list"></div>
+
+<!-- Fullscreen Quiz Modal -->
+<div id="quiz-modal" class="modal hidden">
+  <div class="modal-content">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <span id="quiz-title" class="quiz-title"></span>
+      <span id="timer" class="timer">00:00</span>
+      <button class="close-btn" id="close-modal">×</button>
+    </div>
+
+    <!-- Question Navigation Bar -->
+    <div id="q-nav" class="q-nav"></div>
+
+    <!-- Quiz Box -->
+    <div id="quiz-box">
+      <p id="question-text" class="question"></p>
+      <ul id="options" class="options"></ul>
+
+      <div class="actions">
+        <button id="prev-btn" class="btn secondary">Previous</button>
+        <button id="next-btn" class="btn">Next</button>
+        <button id="submit-btn" class="btn hidden">Submit Section</button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="result-box" class="hidden result-box">
+      <h2>Your Score</h2>
+      <p id="score"></p>
+      <div id="review"></div>
+      <button id="close-review" class="btn">Close</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
